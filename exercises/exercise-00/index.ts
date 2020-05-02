@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import chalk from 'chalk'
 
 /*
 
@@ -25,26 +25,32 @@ Run this exercise:
     yarn -s 0
 
 */
-
-const users: unknown[] = [
-    {
-        name: 'Max Mustermann',
-        age: 25,
-        occupation: 'Chimney sweep'
-    },
-    {
-        name: 'Kate Müller',
-        age: 23,
-        occupation: 'Astronaut'
-    }
-];
-
-function logPerson(user: unknown) {
-    console.log(` - ${chalk.green(user.name)}, ${user.age}`);
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
 }
 
-console.log(chalk.yellow('Users:'));
-users.forEach(logPerson);
+const users: User[] = [
+	{
+		name: 'Max Mustermann',
+		age: 25,
+		occupation: 'Chimney sweep'
+	},
+	{
+		name: 'Kate Müller',
+		age: 23,
+		occupation: 'Astronaut'
+	}
+]
+
+function logPerson(user: User): void {
+	console.log(` - ${chalk.green(user.name)}, ${user.age}`)
+	return
+}
+
+console.log(chalk.yellow('Users:'))
+users.forEach(logPerson)
 
 // In case if you are stuck:
 // https://www.typescriptlang.org/docs/handbook/interfaces.html#introduction
