@@ -32,21 +32,21 @@ interface User {
 }
 
 const users: User[] = [
-	{
-		name: 'Max Mustermann',
-		age: 25,
-		occupation: 'Chimney sweep'
-	},
-	{
-		name: 'Kate Müller',
-		age: 23,
-		occupation: 'Astronaut'
-	}
+  {
+    name: 'Max Mustermann',
+    age: 25,
+    occupation: 'Chimney sweep'
+  },
+  {
+    name: 'Kate Müller',
+    age: 23,
+    occupation: 'Astronaut'
+  }
 ]
 
 function logPerson(user: User): void {
-	console.log(` - ${chalk.green(user.name)}, ${user.age}`)
-	return
+  console.log(` - ${chalk.green(user.name)}, ${user.age}`)
+  return
 }
 
 console.log(chalk.yellow('Users:'))
